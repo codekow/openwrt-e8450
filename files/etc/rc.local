@@ -1,0 +1,11 @@
+# Put your custom commands here that should be executed once
+# the system init finished. By default this file does nothing.
+
+# tor-ssh
+[ -x /etc/tor/tor-ssh.sh ] && /etc/tor/tor-ssh.sh
+[ -e /var/lock/procd_tor-hs.lock ] && rm /var/lock/procd_tor-hs.lock
+
+# fix pxe
+[ -e /www/tftpboot ] || ln -s /opt/data/tftp/tftpboot /www
+
+exit 0

@@ -12,10 +12,12 @@ kmod-usb3
 kmod-zram
 lsblk
 luci-app-attendedsysupgrade
+luci-app-banip
 luci-app-ddns
 luci-app-https-dns-proxy
 luci-app-openvpn
 luci-app-statistics
+luci-app-tor
 luci-app-wol
 luci-proto-wireguard
 luci-ssl
@@ -36,4 +38,3 @@ wget-ssl
 wireguard-tools
 zram-swap
 zstd
-luc-app-tor

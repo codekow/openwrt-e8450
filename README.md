@@ -37,6 +37,10 @@ opkg update
 opkg install luci-app-attendedsysupgrade
 ```
 
+```sh
+rsync -avz --no-owner --no-group files/ root@192.168.1.1:/
+```
+
 ## Links
 
 - https://firmware-selector.openwrt.org

@@ -1,0 +1,7 @@
+
+config tor 'conf'
+	option default '/etc/tor/torrc'
+	option generated '/tmp/torrc'
+	list tail_include '/etc/tor/torrc_custom'
+	list tail_include '/var/run/tor/torrc_generated'
+
