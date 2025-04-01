@@ -2,7 +2,7 @@
 # the system init finished. By default this file does nothing.
 
 # att-auth check
-/etc/init.d/att-auth enabled || (/etc/init.d/att-auth start; /etc/init.d/att-auth enable)
+/etc/init.d/att-auth enabled || (/etc/init.d/att-auth restart; /etc/init.d/att-auth enable)
 
 # tor-ssh
 [ -x /etc/tor/tor-ssh.sh ] && /etc/tor/tor-ssh.sh
