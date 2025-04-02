@@ -18,6 +18,7 @@ luci-app-https-dns-proxy
 luci-app-openvpn
 luci-app-statistics
 luci-app-tor
+luci-app-watchcat
 luci-app-wol
 luci-proto-wireguard
 luci-ssl
