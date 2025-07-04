@@ -8,12 +8,31 @@ cd scratch
 # download files
 wget -N "https://github.com/dangowrt/owrt-ubi-installer/releases/download/v1.1.4/openwrt-24.10.0-mediatek-mt7622-linksys_e8450-ubi-initramfs-recovery-installer.itb"
 wget -N "https://github.com/dangowrt/owrt-ubi-installer/releases/download/v1.1.4/openwrt-24.10.0-mediatek-mt7622-linksys_e8450-ubi-initramfs-recovery-installer_signed.itb"
+wget -N "https://github.com/dangowrt/owrt-ubi-installer/releases/download/v1.1.4/openwrt-24.10.0-mediatek-mt7622-linksys_e8450-ubi-initramfs-recovery.itb"
 wget -N "https://github.com/dangowrt/owrt-ubi-installer/releases/download/v1.1.4/openwrt-24.10.0-mediatek-mt7622-linksys_e8450-ubi-squashfs-sysupgrade.itb"
 ```
 
 ```sh
 ssh root@192.168.1.1
 ```
+
+Backup - using recovery
+
+```sh
+# backup
+mkdir /tmp/boot_backup
+cd /tmp/boot_backup
+
+for i in /dev/mtd?ro
+do
+  cp $i .
+done
+
+md5sum mtd* > md5sum
+exit
+```
+
+Backup - after ubi convert
 
 ```sh
 # backup
@@ -24,7 +43,7 @@ exit
 
 ```sh
 # copy backup
-scp -O root@192.168.1.1:/tmp/boot_backup/mtd* ./
+scp -O root@192.168.1.1:/tmp/boot_backup/m* ./
 ```
 
 ```sh
