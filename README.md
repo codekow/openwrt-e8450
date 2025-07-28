@@ -1,5 +1,12 @@
 # Notes about E8450 UBI
 
+This contains a collection of notes for using an e8450 with openwrt.
+
+## Links
+
+- [Online - Firmware Builder](https://firmware-selector.openwrt.org)
+- [UBI Firmware Converter E8450](https://github.com/dangowrt/owrt-ubi-installer)
+
 ```sh
 # make scratch area
 mkdir scratch
@@ -17,6 +24,8 @@ wget -N "https://github.com/dangowrt/owrt-ubi-installer/releases/download/v1.1.4
 # new firmware
 wget -N "https://github.com/dangowrt/owrt-ubi-installer/releases/download/v1.1.4/openwrt-24.10.0-mediatek-mt7622-linksys_e8450-ubi-squashfs-sysupgrade.itb"
 ```
+
+Load firmware - [192.168.1.1](http://192.168.1.1)
 
 ```sh
 ssh root@192.168.1.1
@@ -65,8 +74,3 @@ opkg install luci-app-attendedsysupgrade
 ```sh
 rsync -avz --no-owner --no-group files/ root@192.168.1.1:/
 ```
-
-## Links
-
-- https://firmware-selector.openwrt.org
-- https://github.com/dangowrt/owrt-ubi-installer
