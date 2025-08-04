@@ -1,5 +1,7 @@
 btop
 bind-dig
+bind-host
+blkid
 conntrack
 coreutils-sort
 cryptsetup
@@ -14,6 +16,7 @@ haveged
 htop
 https-dns-proxy
 kmod-usb3
+kmod-usb-storage
 kmod-zram
 lsblk
 luci-app-adblock-fast
@@ -31,6 +34,7 @@ luci-proto-wireguard
 luci-ssl
 lz4
 mtd
+nmap
 openvpn-openssl
 owut
 parted
@@ -40,8 +44,10 @@ pv
 rsync
 sed
 speedtestcpp
+tcpdump
 uboot-envtools
 unzip
+usbutils
 uvol
 wget-ssl
 wireguard-tools
