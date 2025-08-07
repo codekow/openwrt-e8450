@@ -1,6 +1,6 @@
 # Notes about E8450 UBI
 
-This contains a collection of notes for using an e8450 with openwrt.
+This contains a collection of notes for using an e8450 with openWRT.
 
 ## Links
 
@@ -25,13 +25,22 @@ wget -N "https://github.com/dangowrt/owrt-ubi-installer/releases/download/v1.1.4
 wget -N "https://github.com/dangowrt/owrt-ubi-installer/releases/download/v1.1.4/openwrt-24.10.0-mediatek-mt7622-linksys_e8450-ubi-squashfs-sysupgrade.itb"
 ```
 
-Load firmware - [192.168.1.1](http://192.168.1.1)
+Router Login / Load firmware
+
+- https://192.168.1.1 (default)
+- https://10.0.1.1 (lan -> wan cable)
+
+Firmware Upgrade Page
+
+- https://192.168.1.1/config-admin-firmware.html#firmware
+
+Shell on OpenWRT
 
 ```sh
 ssh root@192.168.1.1
 ```
 
-Backup - using recovery
+Backup - using recovery (alternative)
 
 ```sh
 # backup
@@ -59,16 +68,30 @@ exit
 ```sh
 # copy backup
 scp -O root@192.168.1.1:/tmp/boot_backup/m* ./
+md5sum mtd* > md5sum
 ```
 
 ```sh
+scp -O packages-plus.txt root@192.168.1.1:/tmp
+
 ssh root@192.168.1.1
 ```
 
+Install additional packages
+
 ```sh
-# upgrade firmware
 opkg update
+cat /tmp/packages-plus.txt | xargs opkg install
+```
+
+```sh
 opkg install luci-app-attendedsysupgrade
+
+# upgrade cli - 24.10.0+
+opkg update && opkg install owut
+
+owut check -v
+owut upgrade -v
 ```
 
 ```sh
