@@ -7,6 +7,12 @@ This contains a collection of notes for using an e8450 with openWRT.
 - [Online - Firmware Builder](https://firmware-selector.openwrt.org)
 - [UBI Firmware Converter E8450](https://github.com/dangowrt/owrt-ubi-installer)
 
+## Downloads
+
+- [Initramfs - Recovery Installer](https://github.com/dangowrt/owrt-ubi-installer/releases/download/v1.1.4/openwrt-24.10.0-mediatek-mt7622-linksys_e8450-ubi-initramfs-recovery-installer.itb)
+- [Initramfs - Recovery Installer (Signed)](https://github.com/dangowrt/owrt-ubi-installer/releases/download/v1.1.4/openwrt-24.10.0-mediatek-mt7622-linksys_e8450-ubi-initramfs-recovery-installer_signed.itb)
+- [Sysupgrade - 24.10.0](https://github.com/dangowrt/owrt-ubi-installer/releases/download/v1.1.4/openwrt-24.10.0-mediatek-mt7622-linksys_e8450-ubi-squashfs-sysupgrade.itb)
+
 ```sh
 # make scratch area
 mkdir scratch
