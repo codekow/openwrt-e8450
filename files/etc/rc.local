@@ -11,6 +11,8 @@ fi
 [ -e /var/lock/procd_tor-hs.lock ] && rm /var/lock/procd_tor-hs.lock
 
 # fix pxe
-[ -e /www/tftpboot ] || ln -s /opt/data/tftp/tftpboot /www
+if [ -d /opt/data/tftp/tftpboot ]; then
+  [ -L /www/tftpboot ] || ln -s /opt/data/tftp/tftpboot /www
+fi
 
 exit 0
