@@ -1,8 +1,10 @@
 # Put your custom commands here that should be executed once
 # the system init finished. By default this file does nothing.
 
-# att-auth check
-/etc/init.d/att-auth enabled || (/etc/init.d/att-auth restart; /etc/init.d/att-auth enable)
+# att-auth
+if [ -e /etc/init.d/att-auth ]; then
+  /etc/init.d/att-auth enabled || (/etc/init.d/att-auth restart; /etc/init.d/att-auth enable)
+fi
 
 # tor-ssh
 [ -x /etc/tor/tor-ssh.sh ] && /etc/tor/tor-ssh.sh
