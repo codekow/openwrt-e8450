@@ -1,0 +1,3 @@
+config att-auth 'conf'
+	option default '/etc/att-auth/wpa_supplicant.conf'
+
