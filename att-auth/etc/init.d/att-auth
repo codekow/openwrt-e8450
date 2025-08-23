@@ -10,7 +10,7 @@ NAME=att-auth
 get_config(){
   [ -e /etc/EAP/wpa_supplicant.conf ] && CONF="/etc/EAP/wpa_supplicant.conf"
   [ -e /etc/att-auth/wpa_supplicant.conf ] && CONF="/etc/att-auth/wpa_supplicant.conf"
-  uci -q get att-auth.conf.default && CONF=$(uci -q get att-auth.conf.default)
+  uci -q get att-auth.conf.default > /dev/null && CONF=$(uci -q get att-auth.conf.default)
 
   echo "${CONF}"
 }
