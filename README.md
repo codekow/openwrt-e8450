@@ -103,3 +103,12 @@ owut upgrade -v
 ```sh
 rsync -avz --no-owner --no-group files/ root@192.168.1.1:/
 ```
+
+```sh
+ssh root@192.168.1.1
+```
+
+```sh
+find / -user 1000
+find / -user 1000 -exec chown -h root:root {} \;
+```
