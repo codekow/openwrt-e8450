@@ -77,13 +77,13 @@ scp -O root@192.168.1.1:/tmp/boot_backup/m* ./
 md5sum mtd* > md5sum
 ```
 
+Install additional packages
+
 ```sh
 scp -O packages-plus.txt root@192.168.1.1:/tmp
 
 ssh root@192.168.1.1
 ```
-
-Install additional packages
 
 ```sh
 opkg update
