@@ -53,3 +53,10 @@ wget-ssl
 wireguard-tools
 zram-swap
 zstd
+
+-diffutils
+-luci-app-commands
+-luci-app-upnp
+-luci-app-vnstat2
+-luci-proto-openconnect
+-tang
