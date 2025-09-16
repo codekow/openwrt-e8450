@@ -6,6 +6,8 @@ This contains a collection of notes for using an e8450 with openWRT.
 
 - [Online - Firmware Builder](https://firmware-selector.openwrt.org)
 - [UBI Firmware Converter E8450](https://github.com/dangowrt/owrt-ubi-installer)
+- [OpenWRT - e8450 info](https://openwrt.org/toh/linksys/e8450)
+- [Hard Recovery of the e8450](https://forum.openwrt.org/t/belkin-rt3200-linksys-e8450-wifi-ax-discussion/94302/5108)
 
 ## Downloads
 
