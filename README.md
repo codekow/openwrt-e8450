@@ -114,3 +114,7 @@ ssh root@192.168.1.1
 find / -user 1000
 find / -user 1000 -exec chown -h root:root {} \;
 ```
+
+## Additional Info
+
+- [OpenWRT - podman issues](https://github.com/openwrt/packages/issues/25730)
